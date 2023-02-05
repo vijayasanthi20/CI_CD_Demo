@@ -4,9 +4,9 @@
   become_user: root
   tasks:
   - name: Delete content & directory
-  file:
-    state: absent
-    path: /tmp/docker_{{BUILD_NUMBER}}-1
+    file:
+       state: absent
+       path: /tmp/docker_{{BUILD_NUMBER}}-1
   - name: create directory 
     file:
        path: /tmp/docker_{{BUILD_NUMBER}}
