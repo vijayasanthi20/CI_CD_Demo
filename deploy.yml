@@ -8,7 +8,7 @@
        path: /tmp/docker_{{BUILD_NUMBER}}
        state: directory
   - name: Go to the folder and execute command
-    command: chdir=/tmp/docker_{{BUILD_NUMBER}}
+    command: cd /tmp/docker_{{BUILD_NUMBER}}
   - name: Get the dockerfile
     git: repo=https://github.com/vijayasanthi20/CD_CD_project.git dest=/tmp/docker_{{BUILD_NUMBER}}
   - name: build the docker file
