@@ -12,6 +12,6 @@
   - name: Get the dockerfile
     git: repo=https://github.com/vijayasanthi20/CD_CD_project.git dest=/tmp/docker_{{BUILD_NUMBER}}
   - name: build the docker file
-    command: docker build -t viji20/docker_swarm_project:{{BUILD_NUMBER}} .
+    command: docker build -t "viji20/docker_swarm_project:{{BUILD_NUMBER}}" .
   - name: run the docker
-    command: docker run -itd -P viji20/docker_swarm_project:{{BUILD_NUMBER}}
+    command: docker run -itd -P "viji20/docker_swarm_project:{{BUILD_NUMBER}}"
