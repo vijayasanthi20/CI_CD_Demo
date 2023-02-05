@@ -8,8 +8,8 @@
   - name: start docker
     service: name=docker state=started
   - name: Get the dockerfile
-    git: repo=https://github.com/vijayasanthi20/projCert.git dest=/tmp
+    git: repo=https://github.com/vijayasanthi20/CD_CD_project.git dest=/tmp
   - name: build the docker file
-    command: chdir=/tmp/docker build -t deploy:ansible .
+    command: chdir=/tmp/docker build -t viji20/docker_swarm_project:{{BUILD_NUMBER}} .
   - name: run the docker
-    command: docker run -itd -P deploy:ansible
+    command: docker run -itd -P viji20/docker_swarm_project:{{BUILD_NUMBER}}
